@@ -1,0 +1,296 @@
+/**********************************OVERORDNET CSS*****************************************/
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/*Menubar, logo og links*/
+header {
+  position: sticky;
+  top: 0;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 1vw 2vw 0 rgba(255, 137, 0, 0.4);
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  gap: 10vw;
+  margin: 0vw;
+  padding: 1vw;
+  overflow-x: auto;
+}
+
+.menu a {
+  font-family: "Escoffier Capitaux", serif;
+  font-size: 2vw;
+  text-decoration: none;
+  font-weight: 700;
+  color: #d3e7ea;
+}
+
+.menu a:hover {
+  color: #ffbf85;
+}
+
+.logo img {
+  display: inline;
+  width: 8vw;
+  height: 3vw;
+  height: auto;
+}
+
+.logo {
+  text-align: center;
+}
+
+.background_color {
+  background-color: #07182b;
+}
+
+.menu_color {
+  background-color: #07182b;
+}
+
+/*Headings og tekst - mobilstørrelser */
+h1 {
+  font-family: "shlop", cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20vw;
+  color: #ff8900;
+  line-height: 1.125;
+  margin-bottom: 2vw;
+}
+
+h2 {
+  font-family: "Escoffier Capitaux", serif;
+  font-size: 6vw;
+  color: #ff8900;
+  line-height: 1.125;
+  margin-bottom: 2vw;
+}
+
+h3 {
+  font-family: "Escoffier Capitaux", serif;
+  font-size: 3vw;
+  color: #fff;
+  line-height: 1.125;
+  margin-bottom: 2vw;
+}
+
+p {
+  font-family: "Benguiat Pro ITC", sans-serif;
+  font-size: 3vw;
+  line-height: 1.4;
+  color: #fff;
+}
+
+figcaption {
+  font-family: "Benguiat Pro ITC", sans-serif;
+  font-size: 1vw;
+  line-height: 1.4;
+  color: #fff;
+}
+
+/*Linjer*/
+hr {
+  border: 0;
+  border-top: 1px solid #ffbf85;
+}
+
+/**********************************INDEX*****************************************/
+/*HTML main grid*/
+.index {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 1000px) 1fr;
+}
+
+.index section {
+  grid-column: 2/3;
+  margin-bottom: 2vw;
+}
+
+.index div {
+  margin-bottom: 1vw;
+}
+
+/*Splashbillede og titel*/
+.index #first_section {
+  grid-column: 1/4;
+
+  width: 100%;
+  height: 100vh;
+  background-image: url(images/forside/splash.svg);
+  background-size: cover;
+  background-position: 53% 0%;
+
+  display: grid;
+}
+
+/*Forside links*/
+.index .col_link a {
+  font-family: "Escoffier Capitaux", serif;
+  font-size: 3vw;
+  color: #d3e7ea;
+}
+
+.index .col_link a:hover {
+  color: #ffbf85;
+}
+
+/**********************************IDE*****************************************/
+/*Ide main grid*/
+.ide {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 1000px) 1fr;
+}
+
+.ide section {
+  grid-column: 2/3;
+  margin-bottom: 2vw;
+}
+
+.ide div {
+  margin-bottom: 1vw;
+}
+
+/**********************************ASSETLISTE**********************************************/
+.asset {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 1000px) 1fr;
+}
+
+.asset section {
+  grid-column: 2/3;
+  margin-bottom: 2vw;
+}
+
+.asset div {
+  margin-bottom: 1vw;
+}
+
+/**********************************DOKUMENTATION*****************************************/
+.doku {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 1000px) 1fr;
+}
+
+.doku section {
+  grid-column: 2/3;
+  margin-bottom: 2vw;
+}
+
+.doku div {
+  margin-bottom: 1vw;
+}
+
+/*Media: Menubar*/
+@media (min-width: 620px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu {
+    gap: 5vw;
+    margin-left: 10vw;
+  }
+
+  .logo img {
+    display: inline;
+    width: 8vw;
+    height: 3vw;
+  }
+
+  .menu a:hover {
+    border-top: 1px solid #ffbf85;
+    border-bottom: 1px solid #ffbf85;
+    transition: 0.3s ease;
+    padding: 0.8vw;
+  }
+}
+
+@media (min-width: 1000px) {
+  .menu a {
+    font-family: "Escoffier Capitaux", serif;
+    font-size: 1vw;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  /*    Tekstørrelser web*/
+  h1 {
+    font-size: 8vw;
+  }
+
+  h2 {
+    font-size: 2vw;
+  }
+
+  h3 {
+    font-size: 1.2vw;
+  }
+
+  p {
+    font-size: 1vw;
+  }
+
+  .index .col_link a {
+    font-size: 1vw;
+  }
+
+  /*    Grid index.html*/
+  #second_section .section_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vw;
+  }
+
+  #third_section .section_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vw;
+  }
+
+  #fourth_section .section_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vw;
+  }
+
+  #fifth_section .section_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vw;
+  }
+
+  .asset .section_wrapper {
+    display: flex;
+  }
+
+  .col_figures {
+    display: flex;
+  }
+
+  .col_buttons {
+    display: flex;
+  }
+
+  .col_wrap {
+    display: flex;
+  }
+
+  .col_time {
+    width: 27vw;
+    height: 3vw;
+  }
+
+  .col_life {
+    width: 14vw;
+    height: 5vw;
+  }
+}
